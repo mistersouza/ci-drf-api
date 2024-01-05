@@ -10,15 +10,15 @@ class PostSerializer(serializers.ModelSerializer):
 
     def validate_image_url(self, value):
         if value.size > 1024 * 2014 * 2:
-            raise serializer.ValidationError(
+            raise serializers.ValidationError(
                 'Image size larger than 2MB'
             )
         if value.image.width > 4096:
-            raise serializer.ValidationError(
+            raise serializers.ValidationError(
                 'Image width larger than 4096px'
             )
         if value.image.height > 4096:
-            raise serializer.ValidationError(
+            raise serializers.ValidationError(
                 'Image height larger than 4096'
             )
         return value
@@ -29,12 +29,12 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        filds = [
+        fields = [
             'id',
             'owner',
             'is_owner',
             'profile_id',
-            'profile_image'
+            'profile_image',
             'created_at',
             'updated_at',
             'title',
