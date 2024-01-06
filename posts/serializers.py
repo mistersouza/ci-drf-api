@@ -24,7 +24,7 @@ class PostSerializer(serializers.ModelSerializer):
         return value
         
     def get_is_owner(self, object):
-        request = self.context['context']
+        request = self.context['request']
         return request.user == object.owner
 
     class Meta:
