@@ -7,7 +7,7 @@ class LikeSerializer(serializers.ModelSerializer):
     Serializes the 'Like' model
     to facilitate representation in API responses.
     '''
-    owner = serializer.ReadOnlyField(source='owner.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
         model = Like
