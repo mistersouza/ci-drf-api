@@ -53,7 +53,7 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     '.gitpod.io',
-    'ci-drf.herokuapp.com'
+    'ci-drf-91470c2ccdce.herokuapp.com'
 ]
 
 
