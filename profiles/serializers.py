@@ -33,7 +33,7 @@ class ProfileSerializer(serializers.ModelSerializer):
             'updated_at',
             'name',
             'content',
-            'image_url',
+            'image',
             'is_owner',
             'posts_count',
             'followers_count',
